@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+</head>
+
+<body>
+    <div class="maincontainer">
+        <div class="container">
+            <h2>Register Form </h2>
+            <form action="/myaction.php" name="myForm" onsubmit="return validateForm()" method="post">
+                <div class="formdesign" id="name">
+                    <label for="fname">Name: </label>
+                    <input type="text" name="fname" id="fname" required>
+                    <b><span class="formerror"></span></b>
+                </div>
+
+                <div class="formdesign" id="email">
+                    <label for="email">Email:</label>
+                    <input type="email" name="femail" id="email" required>
+                    <b> <span class="formerror"></span></b>
+                </div>
+
+                <div class="formdesign" id="phone">
+                    <label for="phone">Phone:</label>
+                    <input type="number" name="fphone" id="phone" required>
+                    <b> <span class="formerror"></span></b>
+                </div>
+
+                <div class="formdesign" id="pass">
+                    <label for="password">Password:</label>
+                    <div class="password-container">
+                        <input type="password" name="fpass" id="password" required>
+                        <b> <span class="formerror"></span></b>
+                    </div>
+                </div>
+
+
+                <div class="formdesign" id="cpass">
+                    <label for="cpassword">Confirm Password:</label>
+                    <div class="password-container">
+                        <input type="password" name="fcpass" id="cpassword" required>
+                        <b> <span class="formerror"></span></b>
+                    </div>
+                </div>
+
+
+
+                <input class="but" type="submit">
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
